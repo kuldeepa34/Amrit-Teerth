@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------------
+   SacredPath — custom styles
+   Tailwind handles the bulk of styling via CDN; this file holds the
+   rules Tailwind utilities can't express on their own.
+   ------------------------------------------------------------------ */
+
+/* Base page surface (mirrors theme colors: background / on-background) */
+body {
+    background-color: #fff8f5;
+    color: #231a13;
+}
+
+/* Frosted-glass panels used on the hero & overlay buttons */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Soft "floating" shadow used on cards & panels (design token) */
+.ambient-shadow {
+    box-shadow: 0 20px 40px rgba(16, 32, 59, 0.04);
+}
+
+/* Filled variant of Material Symbols icons (e.g. solid star) */
+.material-symbols-outlined.fill {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Minimal underline-style form field (used in contact / forms) */
+.form-input-minimal {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #897365; /* outline */
+    border-radius: 0;
+    padding: 12px 0;
+    transition: border-color 0.3s ease;
+}
+.form-input-minimal:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom-color: #954a00; /* primary */
+}
+
+/* Subtle dotted texture overlay for hero backgrounds */
+.hero-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23954a00' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Hide scrollbars on horizontally-scrolling rails */
+.hide-scrollbar::-webkit-scrollbar,
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar,
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Respect device safe-areas on the mobile bottom nav */
+.pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+}

@@ -1,0 +1,53 @@
+# ===========================================================
+#  SacredPath — .gitignore
+# ===========================================================
+
+# --- Operating system junk ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# --- Claude / AI assistant files ---
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.cursor/
+.aider*
+.continue/
+
+# --- Secrets & local config (committed as *.example templates) ---
+# These hold real DB / SMTP credentials — never commit them.
+config/database.php
+config/mail.php
+.env
+.env.*
+!.env.example
+
+# --- Logs & temporary files ---
+*.log
+logs/
+tmp/
+*.cache
+error_log
+
+# --- Runtime uploads (user-generated content) ---
+public/uploads/
+
+# --- Composer ---
+composer.phar
+# NOTE: vendor/ is INTENTIONALLY committed.
+# Hostinger shared hosting can't reliably run `composer install` (memory limits),
+# so we upload the project WITH vendor/. Do NOT ignore it unless you switch
+# to a deploy that runs composer on the server.
+# /vendor/

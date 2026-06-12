@@ -1,0 +1,17 @@
+{
+    "name": "sacredpath/website",
+    "description": "SacredPath — Modern Temple Experience (vanilla PHP)",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "phpmailer/phpmailer": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
