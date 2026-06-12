@@ -19,7 +19,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // --- Site metadata ---
-define('SITE_NAME', 'SacredPath');
+define('SITE_NAME', 'Amrit Teerth');
 define('SITE_TAGLINE', 'Modern Temple Experience');
 
 /**
@@ -56,8 +56,8 @@ $FOOTER_LEGAL = [
 
 // --- Social links (update hrefs to the real profiles before launch) ---
 $SOCIAL_LINKS = [
-    ['label' => 'Facebook',  'href' => 'https://facebook.com/sacredpath',   'icon' => 'public'],
-    ['label' => 'Instagram', 'href' => 'https://instagram.com/sacredpath',  'icon' => 'photo_camera'],
-    ['label' => 'YouTube',   'href' => 'https://youtube.com/@sacredpath',   'icon' => 'play_circle'],
-    ['label' => 'Email',     'href' => 'mailto:blessings@sacredpath.com',   'icon' => 'mail'],
+    ['label' => 'Facebook',  'href' => 'https://facebook.com/amritteerth',   'icon' => 'public'],
+    ['label' => 'Instagram', 'href' => 'https://instagram.com/amritteerth',  'icon' => 'photo_camera'],
+    ['label' => 'YouTube',   'href' => 'https://youtube.com/@amritteerth',   'icon' => 'play_circle'],
+    ['label' => 'Email',     'href' => 'mailto:blessings@amritteerth.com',   'icon' => 'mail'],
 ];

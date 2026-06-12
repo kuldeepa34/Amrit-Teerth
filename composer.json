@@ -1,6 +1,6 @@
 {
-    "name": "sacredpath/website",
-    "description": "SacredPath — Modern Temple Experience (vanilla PHP)",
+    "name": "amrit-teerth/website",
+    "description": "Amrit Teerth — Modern Temple Experience (vanilla PHP)",
     "type": "project",
     "require": {
         "php": ">=8.1",

@@ -1,5 +1,5 @@
 -- ============================================================
---  SacredPath — database schema
+--  Amrit Teerth — database schema
 --  Import locally:   mysql -u root -p < database/schema.sql
 --  On Hostinger:     paste into phpMyAdmin > SQL tab
 -- ============================================================
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `blog_posts` (
     `excerpt`      TEXT NOT NULL,
     `body`         MEDIUMTEXT NOT NULL,
     `category`     VARCHAR(60) NOT NULL,
-    `author`       VARCHAR(120) NOT NULL DEFAULT 'SacredPath',
+    `author`       VARCHAR(120) NOT NULL DEFAULT 'Amrit Teerth',
     `image_url`    TEXT NOT NULL,
     `published_at` DATE NOT NULL,
     `is_featured`  TINYINT(1) NOT NULL DEFAULT 0,

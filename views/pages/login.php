@@ -7,7 +7,7 @@
 <div class="w-full max-w-md">
 <div class="glass-panel ambient-shadow rounded-3xl p-8 md:p-10">
 <div class="text-center mb-8">
-<a href="index.php" class="font-display-lg text-display-lg text-primary">SacredPath</a>
+<a href="index.php" class="font-display-lg text-display-lg text-primary">Amrit Teerth</a>
 <h1 class="font-headline-sm text-headline-sm text-on-surface mt-4">Welcome Back</h1>
 <p class="font-body-md text-body-md text-on-surface-variant mt-1">Sign in to continue your spiritual journey.</p>
 </div>
@@ -29,7 +29,7 @@
 <button type="submit" class="w-full bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-surface-tint transition-colors shadow-md hover:shadow-lg">Sign In</button>
 </form>
 <p class="text-center mt-8 font-body-md text-body-md text-on-surface-variant">
-                    New to SacredPath?
+                    New to Amrit Teerth?
                     <a href="register.php" class="text-primary hover:text-secondary transition-colors font-semibold">Create an account</a>
 </p>
 </div>

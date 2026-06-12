@@ -15,7 +15,7 @@ return [
     'username'   => getenv('MAIL_USERNAME') ?: '',
     'password'   => getenv('MAIL_PASSWORD') ?: '',
     'encryption' => getenv('MAIL_ENCRYPTION') ?: 'tls',  // 'tls' or 'ssl'
-    'from'       => getenv('MAIL_FROM') ?: 'no-reply@sacredpath.com',
-    'from_name'  => getenv('MAIL_FROM_NAME') ?: 'SacredPath',
-    'to'         => getenv('MAIL_TO') ?: 'blessings@sacredpath.com',
+    'from'       => getenv('MAIL_FROM') ?: 'no-reply@amritteerth.com',
+    'from_name'  => getenv('MAIL_FROM_NAME') ?: 'Amrit Teerth',
+    'to'         => getenv('MAIL_TO') ?: 'blessings@amritteerth.com',
 ];

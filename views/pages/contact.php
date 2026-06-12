@@ -27,7 +27,7 @@
 </div>
 <div>
 <h3 class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email Inquiry</h3>
-<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="mailto:blessings@sacredpath.com">blessings@sacredpath.com</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="mailto:blessings@amritteerth.com">blessings@amritteerth.com</a>
 </div>
 </div>
 <div class="flex items-start gap-4">
@@ -111,11 +111,11 @@
 </div>
 <!-- Map Section -->
 <div class="mt-stack-lg rounded-xl overflow-hidden h-[400px] relative border border-outline-variant/30 shadow-md">
-<img alt="Map showing SacredPath Sanctuary location" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjFpEjnmK1P-O-_tnUKr1qP6m_Ebuft0WyV9Okp47__lcqpXuNZG8MDiarlXr0dCCzwzAj2YxFcyoZhjKo5sFyNh4it3vVs8v7Kl2fTMjF2LEK8_O1B6fTNcFf18fuq5jW9tLhoUW9tFN9jNp5T0yMyFm__2pE8Av8GO3xA860HUXRr6VLIFiYrJOp1BDtw_MkmlLufdghvi4SufCw9cCJ_tZ7C59VhJGbGv9YUDMyUgUrRKF8eahAOsy2f2w6BiV9CvSQvDdDI3g"/>
+<img alt="Map showing Amrit Teerth Sanctuary location" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjFpEjnmK1P-O-_tnUKr1qP6m_Ebuft0WyV9Okp47__lcqpXuNZG8MDiarlXr0dCCzwzAj2YxFcyoZhjKo5sFyNh4it3vVs8v7Kl2fTMjF2LEK8_O1B6fTNcFf18fuq5jW9tLhoUW9tFN9jNp5T0yMyFm__2pE8Av8GO3xA860HUXRr6VLIFiYrJOp1BDtw_MkmlLufdghvi4SufCw9cCJ_tZ7C59VhJGbGv9YUDMyUgUrRKF8eahAOsy2f2w6BiV9CvSQvDdDI3g"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent pointer-events-none"></div>
 <div class="absolute bottom-6 left-6 glass-panel ambient-shadow px-6 py-4 rounded-lg flex items-center gap-3">
 <div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
-<span class="font-label-caps text-label-caps text-on-surface">SacredPath Sanctuary</span>
+<span class="font-label-caps text-label-caps text-on-surface">Amrit Teerth Sanctuary</span>
 </div>
 </div>
 </div>

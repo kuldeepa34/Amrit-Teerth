@@ -12,7 +12,7 @@
 <span class="font-label-caps text-label-caps text-primary bg-surface-container px-4 py-2 rounded-full self-start">Our Heritage</span>
 <h1 class="font-display-lg text-display-lg text-on-surface">Where Ancient Wisdom Meets Digital Peace</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
-                        SacredPath bridges the gap between timeless spiritual traditions and modern convenience. We believe that seeking divine connection should be as serene as the sanctuary itself. Our platform brings the quiet reverence of high-end wellness retreats and sacred temples directly to your everyday life.
+                        Amrit Teerth bridges the gap between timeless spiritual traditions and modern convenience. We believe that seeking divine connection should be as serene as the sanctuary itself. Our platform brings the quiet reverence of high-end wellness retreats and sacred temples directly to your everyday life.
                     </p>
 </div>
 <div class="md:col-span-7 relative h-[400px] md:h-[600px] rounded-xl overflow-hidden ambient-shadow">

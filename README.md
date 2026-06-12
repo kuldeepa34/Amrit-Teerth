@@ -1,4 +1,4 @@
-# SacredPath
+# Amrit Teerth
 
 A modern temple experience platform — book darshan, puja services, temple
 experiences, and spiritual offerings. Built with **vanilla PHP** (no frameworks).

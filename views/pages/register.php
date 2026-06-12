@@ -7,7 +7,7 @@
 <div class="w-full max-w-md">
 <div class="glass-panel ambient-shadow rounded-3xl p-8 md:p-10">
 <div class="text-center mb-8">
-<a href="index.php" class="font-display-lg text-display-lg text-primary">SacredPath</a>
+<a href="index.php" class="font-display-lg text-display-lg text-primary">Amrit Teerth</a>
 <h1 class="font-headline-sm text-headline-sm text-on-surface mt-4">Begin Your Journey</h1>
 <p class="font-body-md text-body-md text-on-surface-variant mt-1">Create an account to book darshan, puja, and more.</p>
 </div>

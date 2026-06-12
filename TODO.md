@@ -1,4 +1,4 @@
-# SacredPath — Build Roadmap
+# Amrit Teerth — Build Roadmap
 
 Tracking the features that need backend logic. Built step by step.
 

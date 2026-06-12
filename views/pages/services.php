@@ -159,7 +159,7 @@
                             <span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
 </h4>
 <p class="font-body-md text-body-md text-on-surface-variant hidden mt-4">
-                            Yes, all priests affiliated with SacredPath are highly experienced, traditionally trained, and verified by respective temple authorities to ensure authentic ritual conduct.
+                            Yes, all priests affiliated with Amrit Teerth are highly experienced, traditionally trained, and verified by respective temple authorities to ensure authentic ritual conduct.
                         </p>
 </div>
 <!-- FAQ Item 3 -->

@@ -1,5 +1,5 @@
 -- ============================================================
---  SacredPath — local dev database user
+--  Amrit Teerth — local dev database user
 --  Creates a dedicated application user (never use root for the app).
 --  Run once as admin:   sudo mariadb < database/setup.sql
 --

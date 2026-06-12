@@ -34,8 +34,8 @@ NewsletterSubscriber::subscribe($email);
 // Best-effort welcome email (no-op if SMTP isn't configured).
 Mailer::send(
     $email,
-    'Welcome to SacredPath Spiritual Insights 🙏',
-    "Thank you for subscribing.\n\nYou'll now receive our weekly articles, exclusive service offers, and guided meditations.\n\nWith gratitude,\nThe SacredPath Team"
+    'Welcome to Amrit Teerth Spiritual Insights 🙏',
+    "Thank you for subscribing.\n\nYou'll now receive our weekly articles, exclusive service offers, and guided meditations.\n\nWith gratitude,\nThe Amrit Teerth Team"
 );
 
 Flash::set('newsletter', 'Thank you for subscribing to Spiritual Insights. 🙏', 'success');
