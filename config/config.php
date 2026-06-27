@@ -14,7 +14,44 @@ if (!is_file($autoload)) {
 }
 require_once $autoload;
 
+/**
+ * Environment detection (mirrors config/database.php).
+ * Local dev (CLI / localhost / *.test) shows errors; production hides them.
+ */
+$httpHost = $_SERVER['HTTP_HOST'] ?? '';
+$isLocal  = PHP_SAPI === 'cli'
+    || str_contains($httpHost, 'localhost')
+    || str_contains($httpHost, '127.0.0.1')
+    || str_starts_with($httpHost, '192.168.')
+    || str_ends_with(explode(':', $httpHost)[0], '.test');
+define('IS_LOCAL', $isLocal);
+
+// --- Error handling: verbose locally, silent (logged) in production ---
+error_reporting(E_ALL);
+ini_set('display_errors', $isLocal ? '1' : '0');
+ini_set('log_errors', '1');
+
+// --- Security response headers (cheap defence-in-depth) ---
+if (PHP_SAPI !== 'cli' && !headers_sent()) {
+    header('X-Content-Type-Options: nosniff');
+    header('X-Frame-Options: SAMEORIGIN');
+    header('Referrer-Policy: strict-origin-when-cross-origin');
+    header('X-XSS-Protection: 0');
+    if (!$isLocal) {
+        // Force HTTPS for a year once live (browsers ignore this on plain HTTP).
+        header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
+    }
+}
+
+// --- Hardened session cookie (must be set before session_start) ---
 if (session_status() === PHP_SESSION_NONE) {
+    session_set_cookie_params([
+        'lifetime' => 0,
+        'path'     => '/',
+        'httponly' => true,                 // not readable from JavaScript
+        'samesite' => 'Lax',                // CSRF defence-in-depth
+        'secure'   => !$isLocal,            // HTTPS-only in production
+    ]);
     session_start();
 }
 

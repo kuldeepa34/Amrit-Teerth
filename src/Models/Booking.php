@@ -41,6 +41,32 @@ final class Booking
         return (int) $pdo->lastInsertId();
     }
 
+    /**
+     * Whether this user already holds a confirmed booking for the same
+     * offering, date and slot — used to block accidental double-bookings.
+     */
+    public static function existsForSlot(int $userId, int $offeringId, string $bookingDate, string $slotName): bool
+    {
+        $stmt = Connection::get()->prepare(
+            'SELECT 1 FROM bookings
+             WHERE user_id = :user_id
+               AND offering_id = :offering_id
+               AND booking_date = :booking_date
+               AND slot_name = :slot_name
+               AND status = :status
+             LIMIT 1'
+        );
+        $stmt->execute([
+            'user_id'      => $userId,
+            'offering_id'  => $offeringId,
+            'booking_date' => $bookingDate,
+            'slot_name'    => $slotName,
+            'status'       => 'confirmed',
+        ]);
+
+        return (bool) $stmt->fetchColumn();
+    }
+
     /** A user's most recent bookings. */
     public static function forUser(int $userId, int $limit = 5): array
     {

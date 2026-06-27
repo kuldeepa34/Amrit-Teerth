@@ -50,11 +50,60 @@ $temples = [
         'description' => 'One of the oldest and most revered Shakti Peethas, set atop Nilachal Hill and central to Tantric worship traditions.',
         'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuChNizIVoBhPIb3VX3NFq8Yc2RI9DAA54mSq-A09pUg2YcdE929T_xBOxIwOCpQIW1DBv4_fAnCb2m4A2q3QUxD21BfD6MobKEvnrcvalBJKHPr4nfeYHO_Azsi-Iks0J6Y_LTupmfh58J6oCHixI1kZFC6lsNUdGFRyp7BOq-hj0SKvMWgaJII71jQvLER5qe6tuDTnl0Y87BYkyEcxr1GRSJ0WPBXhIVYYn9ezUdfwXFmXwLm2Lm071PTkI4MXPRNmbfVadUKCBs',
     ],
+    // --- Ujjain — the sacred city of Mahakal. All temples below are in Ujjain, MP. ---
     [
         'slug' => 'mahakaleshwar', 'name' => 'Mahakaleshwar', 'deity' => 'Lord Shiva',
         'location' => 'Ujjain, Madhya Pradesh', 'category' => 'jyotirlinga', 'rating' => 4.9,
         'description' => 'A revered Jyotirlinga famed for its Bhasma Aarti, where the deity is worshipped as the lord of time itself.',
         'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuBR_tJfXKFqoK6-hlQy-8IUAQMMqpO-VbnGdobavoBXk1xq-o7SctDnBaPc_BhoZ2aPnyZCGKrhwC-3AzSDmCPqiZQTWun5QzQSlrNHTivpM_pppgF8f9WTZ5o7lTI343h5tjy3H8TB_F_zpBr9tsqm_qisDws2Q2XmxkKilxhY50V-uAAc2ph5ql5jfreHrzHynxzaGMWC1jCGLyBw6q9cWkHKuKFP9fIZ_OvqqE07u-1bmw58PdpsAmwKy937z9Kt4YdFJCVqA_Y',
+    ],
+    [
+        'slug' => 'kal-bhairav-ujjain', 'name' => 'Kal Bhairav Temple', 'deity' => 'Lord Kal Bhairav',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'other', 'rating' => 4.7,
+        'description' => 'An ancient temple of the guardian deity of Ujjain, renowned for the unique tradition of offering liquor to the deity as prasad.',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuBR_tJfXKFqoK6-hlQy-8IUAQMMqpO-VbnGdobavoBXk1xq-o7SctDnBaPc_BhoZ2aPnyZCGKrhwC-3AzSDmCPqiZQTWun5QzQSlrNHTivpM_pppgF8f9WTZ5o7lTI343h5tjy3H8TB_F_zpBr9tsqm_qisDws2Q2XmxkKilxhY50V-uAAc2ph5ql5jfreHrzHynxzaGMWC1jCGLyBw6q9cWkHKuKFP9fIZ_OvqqE07u-1bmw58PdpsAmwKy937z9Kt4YdFJCVqA_Y',
+    ],
+    [
+        'slug' => 'harsiddhi-ujjain', 'name' => 'Harsiddhi Temple', 'deity' => 'Goddess Harsiddhi',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'shakti-peetha', 'rating' => 4.7,
+        'description' => 'A celebrated Shakti Peetha near Rudra Sagar lake, distinguished by its two towering deepstambhas (lamp pillars) lit during festivals.',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuChNizIVoBhPIb3VX3NFq8Yc2RI9DAA54mSq-A09pUg2YcdE929T_xBOxIwOCpQIW1DBv4_fAnCb2m4A2q3QUxD21BfD6MobKEvnrcvalBJKHPr4nfeYHO_Azsi-Iks0J6Y_LTupmfh58J6oCHixI1kZFC6lsNUdGFRyp7BOq-hj0SKvMWgaJII71jQvLER5qe6tuDTnl0Y87BYkyEcxr1GRSJ0WPBXhIVYYn9ezUdfwXFmXwLm2Lm071PTkI4MXPRNmbfVadUKCBs',
+    ],
+    [
+        'slug' => 'mangalnath-ujjain', 'name' => 'Mangalnath Temple', 'deity' => 'Lord Mangal (Mars)',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'other', 'rating' => 4.6,
+        'description' => 'Regarded as the birthplace of the planet Mars (Mangal), this temple on the banks of the Shipra draws devotees seeking relief from Mangal dosha.',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuBR_tJfXKFqoK6-hlQy-8IUAQMMqpO-VbnGdobavoBXk1xq-o7SctDnBaPc_BhoZ2aPnyZCGKrhwC-3AzSDmCPqiZQTWun5QzQSlrNHTivpM_pppgF8f9WTZ5o7lTI343h5tjy3H8TB_F_zpBr9tsqm_qisDws2Q2XmxkKilxhY50V-uAAc2ph5ql5jfreHrzHynxzaGMWC1jCGLyBw6q9cWkHKuKFP9fIZ_OvqqE07u-1bmw58PdpsAmwKy937z9Kt4YdFJCVqA_Y',
+    ],
+    [
+        'slug' => 'chintaman-ganesh-ujjain', 'name' => 'Chintaman Ganesh', 'deity' => 'Lord Ganesha',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'other', 'rating' => 4.6,
+        'description' => 'One of the oldest Ganesha temples in Ujjain, where the lord is revered as the remover of worries (chinta).',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3Syil9pr5VNMHBcI8Zx4kYhPRro2AN8b--5f2D-tWJ3xtdUEzIUuK7I0E6x4f-X2GqhnURh36AJZipdqWxV-vPqG0bb-q-F3r_5L_l7UgcWbY9UDMIy4SPt8AmLll8gReU2ku6je0bb-GtVfaZ8-clO2u5ldg2qw1bhmAmNgew6PXYFZAX7zktbnKnJX4iezunTHjC9wbANlMF33_Dkd3O-b0nVXVFdafc6ru4rWmJARSPu-MZSPNMpcff9oqUoYNzkIQz5bktdM',
+    ],
+    [
+        'slug' => 'gadkalika-ujjain', 'name' => 'Gadkalika Temple', 'deity' => 'Goddess Kalika',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'other', 'rating' => 4.5,
+        'description' => 'An ancient shrine of Goddess Kalika, traditionally associated with the great poet Kalidasa, who is said to have been blessed with wisdom here.',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuChNizIVoBhPIb3VX3NFq8Yc2RI9DAA54mSq-A09pUg2YcdE929T_xBOxIwOCpQIW1DBv4_fAnCb2m4A2q3QUxD21BfD6MobKEvnrcvalBJKHPr4nfeYHO_Azsi-Iks0J6Y_LTupmfh58J6oCHixI1kZFC6lsNUdGFRyp7BOq-hj0SKvMWgaJII71jQvLER5qe6tuDTnl0Y87BYkyEcxr1GRSJ0WPBXhIVYYn9ezUdfwXFmXwLm2Lm071PTkI4MXPRNmbfVadUKCBs',
+    ],
+    [
+        'slug' => 'sandipani-ashram-ujjain', 'name' => 'Sandipani Ashram', 'deity' => 'Lord Krishna',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'other', 'rating' => 4.6,
+        'description' => 'The legendary ashram where Lord Krishna, Balarama and Sudama received their education under Guru Sandipani.',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuCYRCGZDnhjZN1TAmQMqEk05aeszx3lzwigCXJILLUv0UGwOF9u6lfNo6k8FXQz7lYF9UsudcD6VJjfeHpgns-HKUBUwKYtfOMw2365BCWMwd3vnANBrE7f7R_vsXN_22nSAoHiMK6k6bkt0RA7bBN_ouK5Z9vSaUr2CUGLxJlP38gv6o6fxZodL2Tk-NkQBIagtcqKcSvAuCFarEzUWCQpyKQPuCd8w0TDW7m1MaRgCAts0QyENgfEKa_NEq2K4l_u4Cv5mzAyfD8',
+    ],
+    [
+        'slug' => 'bade-ganeshji-ujjain', 'name' => 'Bade Ganeshji Ka Mandir', 'deity' => 'Lord Ganesha',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'other', 'rating' => 4.5,
+        'description' => 'Home to one of the largest artistic idols of Lord Ganesha, located close to the Mahakaleshwar temple.',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3Syil9pr5VNMHBcI8Zx4kYhPRro2AN8b--5f2D-tWJ3xtdUEzIUuK7I0E6x4f-X2GqhnURh36AJZipdqWxV-vPqG0bb-q-F3r_5L_l7UgcWbY9UDMIy4SPt8AmLll8gReU2ku6je0bb-GtVfaZ8-clO2u5ldg2qw1bhmAmNgew6PXYFZAX7zktbnKnJX4iezunTHjC9wbANlMF33_Dkd3O-b0nVXVFdafc6ru4rWmJARSPu-MZSPNMpcff9oqUoYNzkIQz5bktdM',
+    ],
+    [
+        'slug' => 'iskcon-ujjain', 'name' => 'ISKCON Ujjain', 'deity' => 'Lord Krishna',
+        'location' => 'Ujjain, Madhya Pradesh', 'category' => 'other', 'rating' => 4.7,
+        'description' => 'A serene Radha-Krishna temple run by ISKCON, known for its peaceful ambience, kirtans and beautiful deities.',
+        'image_url' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuCYRCGZDnhjZN1TAmQMqEk05aeszx3lzwigCXJILLUv0UGwOF9u6lfNo6k8FXQz7lYF9UsudcD6VJjfeHpgns-HKUBUwKYtfOMw2365BCWMwd3vnANBrE7f7R_vsXN_22nSAoHiMK6k6bkt0RA7bBN_ouK5Z9vSaUr2CUGLxJlP38gv6o6fxZodL2Tk-NkQBIagtcqKcSvAuCFarEzUWCQpyKQPuCd8w0TDW7m1MaRgCAts0QyENgfEKa_NEq2K4l_u4Cv5mzAyfD8',
     ],
     [
         'slug' => 'vaishno-devi', 'name' => 'Vaishno Devi', 'deity' => 'Mata Vaishno Devi',

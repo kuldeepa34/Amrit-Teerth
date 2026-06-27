@@ -1,0 +1,21 @@
+# ============================================================
+#  Route all requests into the public/ folder (the real web root).
+#
+#  InfinityFree-jaise hosts par document root "htdocs" hota hai aur PHP ka
+#  open_basedir htdocs ke bahar jaane nahi deta. Isliye poora project
+#  (public/ samet) htdocs ke ANDAR rakha jaata hai, aur yeh file
+#  https://site/  ko  htdocs/public/index.php  par bhej deti hai.
+#
+#  Local PHP dev server (`php -S localhost:8000 -t public`) is file ko
+#  ignore karta hai — local development par koi farak nahi padta.
+# ============================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Agar request pehle se public/ ke andar hai to kuch mat karo (loop se bachao)
+    RewriteRule ^public/ - [L]
+
+    # Baaki sab kuch public/ ke andar bhej do
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

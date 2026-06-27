@@ -19,6 +19,7 @@ return array(
     'App\\Support\\Flash' => $baseDir . '/src/Support/Flash.php',
     'App\\Support\\Http' => $baseDir . '/src/Support/Http.php',
     'App\\Support\\Mailer' => $baseDir . '/src/Support/Mailer.php',
+    'App\\Support\\Throttle' => $baseDir . '/src/Support/Throttle.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'PHPMailer\\PHPMailer\\DSNConfigurator' => $vendorDir . '/phpmailer/phpmailer/src/DSNConfigurator.php',
     'PHPMailer\\PHPMailer\\Exception' => $vendorDir . '/phpmailer/phpmailer/src/Exception.php',

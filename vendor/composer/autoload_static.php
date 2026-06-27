@@ -42,6 +42,7 @@ class ComposerStaticInita782e30238ba135344426dedd5a9f166
         'App\\Support\\Flash' => __DIR__ . '/../..' . '/src/Support/Flash.php',
         'App\\Support\\Http' => __DIR__ . '/../..' . '/src/Support/Http.php',
         'App\\Support\\Mailer' => __DIR__ . '/../..' . '/src/Support/Mailer.php',
+        'App\\Support\\Throttle' => __DIR__ . '/../..' . '/src/Support/Throttle.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'PHPMailer\\PHPMailer\\DSNConfigurator' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/DSNConfigurator.php',
         'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',

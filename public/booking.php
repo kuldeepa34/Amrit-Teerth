@@ -60,6 +60,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $slot = $schedule[$slotIndex];
+
+    // Block accidental double-booking of the same offering/date/slot.
+    if (Booking::existsForSlot((int) Auth::id(), (int) $offering['id'], $dateObj->format('Y-m-d'), (string) $slot['name'])) {
+        Flash::set('booking', 'You already have a booking for this slot on that date. 🙏', 'error');
+        Http::to('booking.php?offering=' . urlencode($offering['slug']));
+    }
+
     Booking::create(
         (int) Auth::id(),
         (int) $offering['id'],

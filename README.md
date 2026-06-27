@@ -26,7 +26,7 @@ experiences, and spiritual offerings. Built with **vanilla PHP** (no frameworks)
 └── README.md
 ```
 
-## How a page is built (Pattern B — thin entry + view)
+## How a page is built
 
 **Entry points stay tiny.** Each `public/*.php` file just sets metadata and
 points the layout at its view:

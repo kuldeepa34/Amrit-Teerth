@@ -26,7 +26,9 @@ final class Http
         $referer = $_SERVER['HTTP_REFERER'] ?? '';
         $host    = $_SERVER['HTTP_HOST'] ?? '';
 
-        if ($referer !== '' && $host !== '' && str_contains(parse_url($referer, PHP_URL_HOST) ?? '', $host)) {
+        // Only honour a referer whose host is EXACTLY our own (a substring match
+        // would let "amritteerth.example.evil.com" pass → open redirect).
+        if ($referer !== '' && $host !== '' && parse_url($referer, PHP_URL_HOST) === $host) {
             self::to($referer);
         }
         self::to($fallback);

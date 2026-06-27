@@ -26,8 +26,9 @@ CLAUDE.local.md
 .aider*
 .continue/
 
-# --- Secrets & local config (committed as *.example templates) ---
-# These hold real DB / SMTP credentials — never commit them.
+# --- Local config (NEVER commit — these hold real credentials) ---
+# Copy the *.example.php templates and fill in real values. The live files are
+# uploaded to the server directly, not tracked in git.
 config/database.php
 config/mail.php
 .env

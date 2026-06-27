@@ -58,6 +58,25 @@ Tracking the features that need backend logic. Built step by step.
       anchors (#puja/#sankalp/#donations/#pilgrimage); CTAs point to real
       destinations (contact/booking/darshan)
 
+## ✅ Step 7 — Hardening & completeness
+- [x] Production-safe error handling (verbose locally, logged + hidden on live) and
+      env detection in `config/config.php` (`IS_LOCAL`)
+- [x] Hardened session cookie — `HttpOnly` + `SameSite=Lax` + `Secure` in production
+- [x] Security headers — `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`,
+      and `Strict-Transport-Security` on live
+- [x] Fixed open-redirect in `Http::back()` (exact host match, not substring)
+- [x] Login brute-force guard — `App\Support\Throttle` (5 attempts / 5 min)
+- [x] Double-booking prevention — `Booking::existsForSlot()` blocks duplicate slot/date
+- [x] Legal pages added — `privacy.php`, `terms.php`, `faq.php` (shared `views/pages/legal.php`),
+      so footer links no longer 404
+- [x] Removed temporary `public/_debug.php`; `config/database.php` + `config/mail.php`
+      now gitignored (real credentials never committed — use the `*.example.php` templates)
+
+## Still optional / future
+- [ ] Replace Tailwind CDN with a compiled build for production performance
+- [ ] Spam protection (honeypot / throttle) on contact + newsletter forms
+- [ ] Booking slot capacity limits (currently per-user duplicate guard only)
+
 ## To enable on Hostinger
 - Import `database/schema.sql` (or run the per-table seeders) in phpMyAdmin
 - Set DB creds in `config/database.php`; SMTP creds in `config/mail.php`

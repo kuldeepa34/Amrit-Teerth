@@ -34,6 +34,32 @@ $templesUrl = static function (array $params): string {
 </div>
 </div>
 </section>
+<!-- Explore by Sacred City -->
+<?php
+/** Cities with a clickable card. Clicking opens the temples list filtered to that city. */
+$sacredCities = [
+    ['name' => 'Ujjain',   'state' => 'Madhya Pradesh',  'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuBR_tJfXKFqoK6-hlQy-8IUAQMMqpO-VbnGdobavoBXk1xq-o7SctDnBaPc_BhoZ2aPnyZCGKrhwC-3AzSDmCPqiZQTWun5QzQSlrNHTivpM_pppgF8f9WTZ5o7lTI343h5tjy3H8TB_F_zpBr9tsqm_qisDws2Q2XmxkKilxhY50V-uAAc2ph5ql5jfreHrzHynxzaGMWC1jCGLyBw6q9cWkHKuKFP9fIZ_OvqqE07u-1bmw58PdpsAmwKy937z9Kt4YdFJCVqA_Y'],
+    ['name' => 'Varanasi', 'state' => 'Uttar Pradesh',   'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3Syil9pr5VNMHBcI8Zx4kYhPRro2AN8b--5f2D-tWJ3xtdUEzIUuK7I0E6x4f-X2GqhnURh36AJZipdqWxV-vPqG0bb-q-F3r_5L_l7UgcWbY9UDMIy4SPt8AmLll8gReU2ku6je0bb-GtVfaZ8-clO2u5ldg2qw1bhmAmNgew6PXYFZAX7zktbnKnJX4iezunTHjC9wbANlMF33_Dkd3O-b0nVXVFdafc6ru4rWmJARSPu-MZSPNMpcff9oqUoYNzkIQz5bktdM'],
+    ['name' => 'Tirumala', 'state' => 'Andhra Pradesh',  'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuCYRCGZDnhjZN1TAmQMqEk05aeszx3lzwigCXJILLUv0UGwOF9u6lfNo6k8FXQz7lYF9UsudcD6VJjfeHpgns-HKUBUwKYtfOMw2365BCWMwd3vnANBrE7f7R_vsXN_22nSAoHiMK6k6bkt0RA7bBN_ouK5Z9vSaUr2CUGLxJlP38gv6o6fxZodL2Tk-NkQBIagtcqKcSvAuCFarEzUWCQpyKQPuCd8w0TDW7m1MaRgCAts0QyENgfEKa_NEq2K4l_u4Cv5mzAyfD8'],
+    ['name' => 'Madurai',  'state' => 'Tamil Nadu',       'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuCTMEw2TH6MYIklcO4LOBek8ntNy6HYn-lWVKxTOszC2b1p7ejvRWTomMQNNiwakABRBnjoEuw8n4Sz-d5v4IYwRbCjbh8l73U9rvYOKBM6ExbHHKHNV4W7FsNDT-vZI7wjmToFgbhV6pyOAFYawvLBX_4tTPhi1U_7bD_RqObF2N9-TJ2v97Ho2Uud1G0JdKF1tvVdL3oBYw82Fhv3eq_pYqatYJTnMBvRixgcqPuPtPn0h7uOfUgbjdO7Jg8LxQCxU5r31u8A1LE'],
+];
+?>
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-md">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-2">Explore by Sacred City</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Tap a city to see all its temples.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<?php foreach ($sacredCities as $city): ?>
+<a href="<?= htmlspecialchars($templesUrl(['q' => $city['name']])) ?>" class="relative rounded-xl overflow-hidden group aspect-[4/3] cursor-pointer block">
+<img alt="<?= htmlspecialchars($city['name']) ?>" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="<?= htmlspecialchars($city['image']) ?>"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4 md:p-6 w-full">
+<h4 class="font-headline-sm text-headline-sm text-on-primary mb-1"><?= htmlspecialchars($city['name']) ?></h4>
+<p class="font-label-caps text-label-caps text-on-primary/80"><?= htmlspecialchars($city['state']) ?></p>
+</div>
+</a>
+<?php endforeach; ?>
+</div>
+</section>
 <!-- Temple Grid -->
 <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-lg">
 <?php if ($temples === []): ?>
