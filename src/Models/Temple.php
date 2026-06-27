@@ -87,4 +87,106 @@ final class Temple
 
         return $stmt->fetch() ?: null;
     }
+
+    // ---------------------------------------------------------------------
+    //  Admin CRUD
+    // ---------------------------------------------------------------------
+
+    /** Every temple, newest first — for the admin list. */
+    public static function all(): array
+    {
+        return Connection::get()
+            ->query('SELECT * FROM temples ORDER BY id DESC')
+            ->fetchAll();
+    }
+
+    public static function find(int $id): ?array
+    {
+        $stmt = Connection::get()->prepare('SELECT * FROM temples WHERE id = :id');
+        $stmt->execute(['id' => $id]);
+
+        return $stmt->fetch() ?: null;
+    }
+
+    public static function count_all(): int
+    {
+        return (int) Connection::get()->query('SELECT COUNT(*) FROM temples')->fetchColumn();
+    }
+
+    /** Insert a temple. $data keys: slug, name, deity, location, category, description, image_url, rating. */
+    public static function create(array $data): int
+    {
+        $pdo  = Connection::get();
+        $stmt = $pdo->prepare(
+            'INSERT INTO temples (slug, name, deity, location, category, description, image_url, rating)
+             VALUES (:slug, :name, :deity, :location, :category, :description, :image_url, :rating)'
+        );
+        $stmt->execute(self::bind($data));
+
+        return (int) $pdo->lastInsertId();
+    }
+
+    public static function update(int $id, array $data): void
+    {
+        $params       = self::bind($data);
+        $params['id'] = $id;
+
+        Connection::get()->prepare(
+            'UPDATE temples SET
+                slug = :slug, name = :name, deity = :deity, location = :location,
+                category = :category, description = :description, image_url = :image_url, rating = :rating
+             WHERE id = :id'
+        )->execute($params);
+    }
+
+    public static function delete(int $id): void
+    {
+        Connection::get()->prepare('DELETE FROM temples WHERE id = :id')->execute(['id' => $id]);
+    }
+
+    /** Whether a slug is already taken (optionally excluding one temple id). */
+    public static function slugExists(string $slug, ?int $exceptId = null): bool
+    {
+        $sql    = 'SELECT 1 FROM temples WHERE slug = :slug';
+        $params = ['slug' => $slug];
+        if ($exceptId !== null) {
+            $sql .= ' AND id <> :id';
+            $params['id'] = $exceptId;
+        }
+        $stmt = Connection::get()->prepare($sql);
+        $stmt->execute($params);
+
+        return (bool) $stmt->fetchColumn();
+    }
+
+    /**
+     * Storable category values for the admin dropdown.
+     * (CATEGORIES includes the 'all' filter key, which is never stored.)
+     */
+    public const STORABLE_CATEGORIES = [
+        'jyotirlinga'   => 'Jyotirlinga',
+        'shakti-peetha' => 'Shakti Peetha',
+        'south-indian'  => 'South Indian',
+        'other'         => 'Other',
+    ];
+
+    /** Normalise input to exactly the columns we write. */
+    private static function bind(array $data): array
+    {
+        $category = (string) ($data['category'] ?? 'other');
+        if (!array_key_exists($category, self::STORABLE_CATEGORIES)) {
+            $category = 'other';
+        }
+
+        return [
+            'slug'        => (string) ($data['slug'] ?? ''),
+            'name'        => (string) ($data['name'] ?? ''),
+            'deity'       => ($data['deity'] ?? '') !== '' ? (string) $data['deity'] : null,
+            'location'    => (string) ($data['location'] ?? ''),
+            'category'    => $category,
+            'description' => (string) ($data['description'] ?? ''),
+            'image_url'   => (string) ($data['image_url'] ?? ''),
+            'rating'      => (float) ($data['rating'] ?? 5.0),
+        ];
+    }
 }

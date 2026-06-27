@@ -44,4 +44,25 @@ final class User
 
         return (bool) $stmt->fetchColumn();
     }
+
+    /** All users, newest first — for the admin list (no password hashes). */
+    public static function all(): array
+    {
+        return Connection::get()
+            ->query('SELECT id, name, email, is_admin, created_at FROM users ORDER BY id DESC')
+            ->fetchAll();
+    }
+
+    public static function count_all(): int
+    {
+        return (int) Connection::get()->query('SELECT COUNT(*) FROM users')->fetchColumn();
+    }
+
+    /** Grant or revoke admin rights. */
+    public static function setAdmin(int $id, bool $isAdmin): void
+    {
+        Connection::get()
+            ->prepare('UPDATE users SET is_admin = :is_admin WHERE id = :id')
+            ->execute(['is_admin' => $isAdmin ? 1 : 0, 'id' => $id]);
+    }
 }

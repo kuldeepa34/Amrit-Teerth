@@ -22,4 +22,22 @@ final class NewsletterSubscriber
         );
         $stmt->execute(['email' => $email]);
     }
+
+    /** All subscribers, newest first — for the admin list / export. */
+    public static function all(): array
+    {
+        return Connection::get()
+            ->query('SELECT * FROM newsletter_subscribers ORDER BY created_at DESC')
+            ->fetchAll();
+    }
+
+    public static function count_all(): int
+    {
+        return (int) Connection::get()->query('SELECT COUNT(*) FROM newsletter_subscribers')->fetchColumn();
+    }
+
+    public static function delete(int $id): void
+    {
+        Connection::get()->prepare('DELETE FROM newsletter_subscribers WHERE id = :id')->execute(['id' => $id]);
+    }
 }

@@ -28,4 +28,22 @@ final class ContactMessage
             'message'          => $message,
         ]);
     }
+
+    /** All messages, newest first — for the admin inbox. */
+    public static function all(): array
+    {
+        return Connection::get()
+            ->query('SELECT * FROM contact_messages ORDER BY created_at DESC')
+            ->fetchAll();
+    }
+
+    public static function count_all(): int
+    {
+        return (int) Connection::get()->query('SELECT COUNT(*) FROM contact_messages')->fetchColumn();
+    }
+
+    public static function delete(int $id): void
+    {
+        Connection::get()->prepare('DELETE FROM contact_messages WHERE id = :id')->execute(['id' => $id]);
+    }
 }

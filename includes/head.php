@@ -4,6 +4,9 @@
  * Set $pageTitle before including this file to customise the title.
  */
 $pageTitle = $pageTitle ?? SITE_NAME . ' - ' . SITE_TAGLINE;
+// Pages outside the web root's top level (e.g. /admin/) set this to '../'
+// so relative asset links still resolve.
+$assetPrefix = $assetPrefix ?? '';
 ?>
 <!DOCTYPE html>
 <html class="light" lang="en">
@@ -111,5 +114,5 @@ $pageTitle = $pageTitle ?? SITE_NAME . ' - ' . SITE_TAGLINE;
         },
       }
     </script>
-<link href="assets/css/custom.css" rel="stylesheet"/>
+<link href="<?= $assetPrefix ?>assets/css/custom.css" rel="stylesheet"/>
 </head>

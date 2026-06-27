@@ -29,15 +29,22 @@ final class Auth
     {
         session_regenerate_id(true); // prevent session fixation
         $_SESSION['user'] = [
-            'id'    => (int) $user['id'],
-            'name'  => $user['name'],
-            'email' => $user['email'],
+            'id'       => (int) $user['id'],
+            'name'     => $user['name'],
+            'email'    => $user['email'],
+            'is_admin' => (bool) ($user['is_admin'] ?? false),
         ];
     }
 
     public static function check(): bool
     {
         return !empty($_SESSION['user']);
+    }
+
+    /** Whether the logged-in user is an administrator. */
+    public static function isAdmin(): bool
+    {
+        return !empty($_SESSION['user']['is_admin']);
     }
 
     public static function user(): ?array

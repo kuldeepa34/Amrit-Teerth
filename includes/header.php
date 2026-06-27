@@ -33,6 +33,9 @@ $activeNav = $activeNav ?? '';
 <div class="hidden md:flex items-center gap-4">
 <?php if (\App\Support\Auth::check()): ?>
 <span class="font-label-caps text-label-caps text-on-surface-variant">Hi, <?= htmlspecialchars(\App\Support\Auth::user()['name']) ?></span>
+<?php if (\App\Support\Auth::isAdmin()): ?>
+<a class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors" href="admin/index.php">Admin</a>
+<?php endif; ?>
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="logout.php">Logout</a>
 <a class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps hover:bg-surface-tint transition-colors shadow-sm" href="services.php">Book Service</a>
 <?php else: ?>
@@ -48,6 +51,9 @@ $activeNav = $activeNav ?? '';
 <div id="profile-dropdown" class="hidden absolute right-0 mt-3 w-52 bg-surface-container-lowest rounded-xl shadow-[0_15px_40px_rgba(16,32,59,0.12)] border border-outline-variant/40 py-2 z-50">
 <?php if (\App\Support\Auth::check()): ?>
 <div class="px-4 py-2 font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant/30 mb-1">Hi, <?= htmlspecialchars(\App\Support\Auth::user()['name']) ?></div>
+<?php if (\App\Support\Auth::isAdmin()): ?>
+<a class="flex items-center gap-3 px-4 py-3 font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="admin/index.php"><span class="material-symbols-outlined text-[20px] text-primary">admin_panel_settings</span> Admin Panel</a>
+<?php endif; ?>
 <a class="flex items-center gap-3 px-4 py-3 font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="booking.php"><span class="material-symbols-outlined text-[20px] text-primary">event_available</span> Book Darshan</a>
 <a class="flex items-center gap-3 px-4 py-3 font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="logout.php"><span class="material-symbols-outlined text-[20px] text-primary">logout</span> Logout</a>
 <?php else: ?>

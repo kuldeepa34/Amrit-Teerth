@@ -79,4 +79,25 @@ final class Booking
 
         return $stmt->fetchAll();
     }
+
+    /** All bookings with the booking user's name/email — for the admin list. */
+    public static function all(): array
+    {
+        return Connection::get()->query(
+            'SELECT b.*, u.name AS user_name, u.email AS user_email
+             FROM bookings b
+             LEFT JOIN users u ON u.id = b.user_id
+             ORDER BY b.created_at DESC'
+        )->fetchAll();
+    }
+
+    public static function count_all(): int
+    {
+        return (int) Connection::get()->query('SELECT COUNT(*) FROM bookings')->fetchColumn();
+    }
+
+    public static function delete(int $id): void
+    {
+        Connection::get()->prepare('DELETE FROM bookings WHERE id = :id')->execute(['id' => $id]);
+    }
 }
